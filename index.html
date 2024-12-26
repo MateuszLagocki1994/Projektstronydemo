@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja Pokoi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Witamy w naszym hotelu!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#rooms">Pokoje</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#reviews">Opinie</a></li>
+                <li><a href="#booking">Rezerwacja</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>O nas</h2>
+        <p>Nasza misja to zapewnienie komfortowego pobytu w przyjaznej atmosferze. Oferujemy różnorodne pokoje dostosowane do potrzeb naszych gości.</p>
+    </section>
+
+    <section id="rooms">
+        <h2>Pokoje</h2>
+        <div class="room">
+            <h3>Pokój Deluxe</h3>
+            <p>Opis pokoju: przestronny pokój z widokiem na morze, wyposażony w telewizor, klimatyzację i minibar.</p>
+            <p>Cena: 300 PLN za noc</p>
+        </div>
+        <div class="room">
+            <h3>Pokój Standard</h3>
+            <p>Opis pokoju: komfortowy pokój z podstawowym wyposażeniem, idealny dla par.</p>
+            <p>Cena: 200 PLN za noc</p>
+        </div>
+        <div class="room">
+            <h3>Pokój Ekonomiczny</h3>
+            <p>Opis pokoju: mały, ale przytulny pokój, idealny dla podróżujących w pojedynkę.</p>
+            <p>Cena: 150 PLN za noc</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Pokój Deluxe">
+            <img src="image2.jpg" alt="Pokój Standard">
+            <img src="image3.jpg" alt="Pokój Ekonomiczny">
+            <img src="image4.jpg" alt="Widok z hotelu">
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Opinie gości</h2>
+        <div class="review">
+            <p><strong>Anna Kowalska:</strong> "Wspaniały pobyt! Pokoje były czyste, a obsługa bardzo pomocna."</p>
+        </div>
+        <div class="review">
+            <p><strong>Jan Nowak:</strong> "Bardzo dobra lokalizacja i komfortowe warunki. Zdecydowanie polecam!"</p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Rezerwacja</h2>
+        <form action="submit_booking.php" method="POST">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="checkin">Data zameldowania:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">Data wymeldowania:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="guests">Liczba gości:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+            <button type="submit">Zarezerwuj</button>
+ </form>
+    </section>
+
+    <footer>
+        <h2>Kontakt</h2>
+        <p>Email: kontakt@hotel.pl</p>
+        <p>Telefon: 123-456-789</p>
+    </footer>
+</body>
+</html>
