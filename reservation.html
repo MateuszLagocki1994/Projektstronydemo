@@ -25,17 +25,21 @@
             <label for="name">Imię i nazwisko:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
 
             <label for="room">Wybierz pokój:</label>
             <select id="room" name="room" required>
                 <option value="standard">Pokój Standardowy</option>
-                <option value="luxury">Pokój Luksusowy</option>
+                <option value="deluxe">Pokój Deluxe</option>
+                <option value="apartment">Apartament</option>
             </select>
 
-            <label for="dates">Daty pobytu:</label>
-            <input type="text" id="dates" name="dates" placeholder="DD/MM/YYYY - DD/MM/YYYY" required>
+            <label for="checkin">Data zameldowania:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Data wymeldowania:</label>
+            <input type="date" id="checkout" name="checkout" required>
 
             <button type="submit">Zarezerwuj</button>
         </form>
