@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezerwacja Pokoi</title>
+    <title>Hotel Marzenie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Witamy w naszym hotelu!</h1>
+        <h1>Hotel Marzenie</h1>
         <nav>
             <ul>
                 <li><a href="#about">O nas</a></li>
@@ -23,67 +23,89 @@
 
     <section id="about">
         <h2>O nas</h2>
-        <p>Nasza misja to zapewnienie komfortowego pobytu w przyjaznej atmosferze. Oferujemy różnorodne pokoje dostosowane do potrzeb naszych gości.</p>
+        <p>Witamy w Hotelu Marzenie, idealnym miejscu na relaks i wypoczynek. Nasz hotel oferuje komfortowe pokoje, doskonałą obsługę oraz wiele atrakcji w okolicy.</p>
     </section>
 
     <section id="rooms">
         <h2>Pokoje</h2>
         <div class="room">
+            <h3>Pokój Standardowy</h3>
+            <p>Komfortowy pokój z podwójnym łóżkiem, łazienką i widokiem na ogród.</p>
+            <p>Cena: 200 PLN/noc</p>
+        </div>
+        <div class="room">
             <h3>Pokój Deluxe</h3>
-            <p>Opis pokoju: przestronny pokój z widokiem na morze, wyposażony w telewizor, klimatyzację i minibar.</p>
-            <p>Cena: 300 PLN za noc</p>
+            <p>Przestronny pokój z balkonem, minibarem i widokiem na morze.</p>
+            <p>Cena: 350 PLN/noc</p>
         </div>
         <div class="room">
-            <h3>Pokój Standard</h3>
-            <p>Opis pokoju: komfortowy pokój z podstawowym wyposażeniem, idealny dla par.</p>
-            <p>Cena: 200 PLN za noc</p>
-        </div>
-        <div class="room">
-            <h3>Pokój Ekonomiczny</h3>
-            <p>Opis pokoju: mały, ale przytulny pokój, idealny dla podróżujących w pojedynkę.</p>
-            <p>Cena: 150 PLN za noc</p>
+            <h3>Apartament</h3>
+            <p>Luksusowy apartament z osobnym salonem, kuchnią i jacuzzi.</p>
+            <p>Cena: 600 PLN/noc</p>
         </div>
     </section>
 
     <section id="gallery">
         <h2>Galeria</h2>
-        <div class="gallery">
-            <img src="image1.jpg" alt="Pokój Deluxe">
-            <img src="image2.jpg" alt="Pokój Standard">
-            <img src="image3.jpg" alt="Pokój Ekonomiczny">
-            <img src="image4.jpg" alt="Widok z hotelu">
-        </div>
+        <img src="hotel1.jpg" alt="Widok hotelu" />
+        <img src="hotel2.jpg" alt="Pokój hotelowy" />
+        <img src="hotel3.jpg" alt="Restauracja" />
     </section>
 
     <section id="reviews">
         <h2>Opinie gości</h2>
         <div class="review">
-            <p><strong>Anna Kowalska:</strong> "Wspaniały pobyt! Pokoje były czyste, a obsługa bardzo pomocna."</p>
+            <p><strong>Anna K.</strong>: "Niesamowite miejsce! Obsługa była bardzo pomocna, a pokoje czyste i komfortowe."</p>
         </div>
         <div class="review">
-            <p><strong>Jan Nowak:</strong> "Bardzo dobra lokalizacja i komfortowe warunki. Zdecydowanie polecam!"</p>
+            <p><strong>Jan P.</strong>: "Świetna lokalizacja i piękne widoki. Zdecydowanie wrócimy!"</p>
+        </div>
+        <div class="review">
+            <p><strong>Katarzyna M.</strong>: "Bardzo polecam! Wspaniałe jedzenie i miła atmosfera."</p>
         </div>
     </section>
 
     <section id="booking">
         <h2>Rezerwacja</h2>
-        <form action="submit_booking.php" method="POST">
+        <form action="submit_booking.php" method="post">
             <label for="name">Imię i nazwisko:</label>
             <input type="text" id="name" name="name" required>
-            <label for="checkin">Data zameldowania:</label>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="checkin">Data przyjazdu:</label>
             <input type="date" id="checkin" name="checkin" required>
-            <label for="checkout">Data wymeldowania:</label>
+
+            <label for="checkout">Data wyjazdu:</label>
             <input type="date" id="checkout" name="checkout" required>
-            <label for="guests">Liczba gości:</label>
-            <input type="number" id="guests" name="guests" min="1" required>
-            <button type="submit">Zarezerwuj</button>
- </form>
+
+            <label for="room">Typ pokoju:</label>
+            <select id="room" name="room">
+                <option value="standard">Pokój Standardowy</option>
+                <option value="deluxe">Pokój Deluxe</option>
+                <option value="apartment">Apartament</option>
+            </select>
+
+            <button type="submit">Z arezerwuj</button>
+        </form>
+    </section>
+
+    <section id="location">
+        <h2>Lokalizacja</h2>
+        <p>Nasza lokalizacja to idealne miejsce na wypoczynek. Znajdujemy się w pobliżu plaży oraz głównych atrakcji turystycznych.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153164!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0f0f0f%3A0x0!2zMzcnMzQyLjAiTiAxNDTCsDQ5JzAwLjAiRQ!5e0!3m2!1spl!2spl!4v1616161616161" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Adres: ul. Przykładowa 1, 00-000 Miasto</p>
+        <p>Telefon: +48 123 456 789</p>
+        <p>Email: kontakt@hotelmarzenie.pl</p>
     </section>
 
     <footer>
-        <h2>Kontakt</h2>
-        <p>Email: kontakt@hotel.pl</p>
-        <p>Telefon: 123-456-789</p>
+        <p>&copy; 2023 Hotel Marzenie. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
