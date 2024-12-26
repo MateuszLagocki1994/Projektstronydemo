@@ -15,38 +15,34 @@
                 <li><a href="about.html">O nas</a></li>
                 <li><a href="rooms.html">Pokoje</a></li>
                 <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
         <h2>Rezerwacja</h2>
-        <p>Proszę wypełnić formularz rezerwacji poniżej:</p>
         <form action="submit_booking.php" method="post">
             <label for="name">Imię i nazwisko:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">E-mail:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="phone">Numer telefonu:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="room">Wybierz pokój:</label>
-            <select id="room" name="room" required>
-                <option value="single">Pokój jednoosobowy</option>
-                <option value="double">Pokój dwuosobowy</option>
-                <option value="family">Pokój rodzinny</option>
+            <label for="room-type">Typ pokoju:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="single">Pokój Jednoosobowy</option>
+                <option value="double">Pokój Dwuosobowy</option>
+                <option value="family">Pokój Rodzinny</option>
+                <option value="apartment">Apartament</option>
             </select>
 
-            <label for="checkin">Data przyjazdu:</label>
-            <input type="date" id="checkin" name="checkin" required>
+            <label for="check-in">Data zameldowania:</label>
+            <input type="date" id="check-in" name="check-in" required>
 
-            <label for="checkout">Data wyjazdu:</label>
-            <input type="date" id="checkout" name="checkout" required>
-
-            <label for="guests">Liczba gości:</label>
-            <input type="number" id="guests" name="guests" min="1" max="10" required>
+            <label for="check-out">Data ```html
+wykwaterowania:</label>
+            <input type="date" id="check-out" name="check-out" required>
 
             <button type="submit">Zarezerwuj</button>
         </form>
@@ -55,20 +51,5 @@
     <footer>
         <p>&copy; 2023 Hotel Marzenie. Wszelkie prawa zastrzeżone.</p>
     </footer>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-
-            if (!name || !email || !phone || !checkin || !checkout) {
-                alert('Proszę wypełnić wszystkie wymagane pola.');
-                event.preventDefault(); // Zatrzymuje wysyłanie formularza
-            }
-        });
-    </script>
 </body>
 </html>

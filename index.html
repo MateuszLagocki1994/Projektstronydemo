@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Marzenie - Strona Główna</title>
+    <title>Hotel Marzenie - Promocje</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,68 +16,31 @@
                 <li><a href="rooms.html">Pokoje</a></li>
                 <li><a href="gallery.html">Galeria</a></li>
                 <li><a href="reservation.html">Rezerwacja</a></li>
-                <li><a href="faq.html">FAQ</a></li> <!-- Dodany link do FAQ -->
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="promotions.html">Promocje</a></li> 
+                <li><a href="events.html">Wydarzenia</a></li> 
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Witamy w Hotelu Marzenie!</h2>
-        <p>Oferujemy komfortowe pokoje w sercu pięknej okolicy. Nasz hotel to idealne miejsce na relaks i wypoczynek.</p>
-    </section>
-
-    <section id="reviews">
-        <h2>Opinie naszych gości</h2>
-        <div class="carousel">
-            <div class="carousel-item active">
-                <p><strong>Anna Kowalska:</strong> "Wspaniałe miejsce! Obsługa była bardzo miła, a pokoje czyste i komfortowe."</p>
-            </div>
-            <div class="carousel-item">
-                <p><strong>Jan Nowak:</strong> "Bardzo polecam! Świetna lokalizacja i pyszne śniadania."</p>
-            </div>
-            <div class="carousel-item">
-                <p><strong>Katarzyna Wiśniewska:</strong> "Idealne miejsce na weekendowy wypad. Na pewno wrócimy!"</p>
-            </div>
-            <div class="carousel-item">
-                <p><strong>Piotr Zieliński:</strong> "Cudowna atmosfera i bardzo pomocna obsługa!"</p>
-            </div>
+        <h2>Aktualne Promocje</h2>
+        <div class="promotion">
+            <h3>Wakacje w Hotelu Marzenie</h3>
+            <p>Rezerwuj pokój na minimum 3 noce i otrzymaj 20% zniżki na cały pobyt!</p>
         </div>
-    </section>
-
-    <section id="attractions">
-        <h2>Lokalne atrakcje</h2>
-        <ul>
-            <li><strong>Park Narodowy:</strong> Idealne miejsce na piesze wędrówki i podziwianie przyrody.</li>
-            <li><strong>Muzeum Historii:</strong> Poznaj historię regionu i jego kultury.</li>
-            <li><strong>Restauracje:</strong> Spróbuj lokalnych specjałów w pobliskich restauracjach.</li>
-            <li><strong>Plaża:</strong> Relaks na plaży i kąpiele w morzu.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt z nami</h2>
-        <p>Adres: Ulica Przykładowa 123, 00-000 Miasto</p>
-        <p>Telefon: +48 123 456 789</p>
-        <p>Email: kontakt@hotelmarzenie.pl</p>
+        <div class="promotion">
+            <h3>Rodzinne Wakacje</h3>
+            <p>Dzieci do lat 12 nocują za darmo w pokoju rodzinnym!</p>
+        </div>
+        <div class="promotion">
+            <h3>Romantyczny Weekend</h3>
+            <p>Rezerwacja pokoju dwuosobowego z kolacją przy świecach w cenie 500 PLN za noc.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2023 Hotel Marzenie. Wszelkie prawa zastrzeżone.</p>
     </footer>
-
-    <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-
-        function showNextItem() {
-            items[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % totalItems; // Przechodzi do następnego elementu
-            items[currentIndex].classList.add('active');
-        }
-
-        // Ustaw interwał na 5 sekund
-        setInterval(showNextItem, 5000);
-    </script>
 </body>
 </html>
