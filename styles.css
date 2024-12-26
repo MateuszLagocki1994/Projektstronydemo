@@ -1,14 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Resetowanie domyślnych stylów */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(to right, #4a90e2, #50e3c2);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -25,24 +32,40 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
 section {
     padding: 20px;
-    margin: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #4a90e2;
 }
 
 .room {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;
     margin: 10px 0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.review {
-    border: 1px solid #eee;
-    padding: 10px;
-    margin: 10px 0;
-    background: #f9f9f9;
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -51,29 +74,43 @@ form {
 }
 
 form label {
-    margin: 5px 0;
+    margin: 10px 0 5px;
 }
 
 form input, form select {
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #4a90e2;
+    outline: none;
 }
 
 button {
     padding: 10px;
-    background: #333;
+    background: #4a90e2;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #555;
+    background: #357ab8;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     background: #333;
     color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
 }
